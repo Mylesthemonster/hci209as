@@ -21,6 +21,26 @@ hci209as/
 |   ├── package-lock.json
 |   ├── package.json
 |   └── node_modules/
+└─-jots-app/
+|   ├── node_modules/
+|   ├── package-lock.json
+|   ├── package.json
+|   ├── public/
+|   └── src/
+|   |   ├── App.js
+|   |   ├── Chat.js
+|   |   ├── index.js
+|   |   ├── Message.js
+|   |   ├── Sidebar.js
+|   |   ├── SidebarChat.js
+|   |   ├── App.css
+|   |   ├── Chat.css
+|   |   ├── index.css
+|   |   ├── Message.css
+|   |   ├── Sidebar.css
+|   |   ├── SidebarChat.css
+|   |   ├── app/
+|   |   └── features/
 └── (More to come)
 ```
 
