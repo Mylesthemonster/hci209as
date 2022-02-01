@@ -1,8 +1,7 @@
 <p align="center">
   <h3 align="center">209A.S</h3>
-
   <p align="center">
-    Human Computer Interaction
+    <h1 align="center">Human Computer Interaction</h1>
     <br>
   </p>
 </p>
@@ -33,17 +32,20 @@ hci209as/
 |   |   ├── Message.js
 |   |   ├── Sidebar.js
 |   |   ├── SidebarChat.js
+|   |   ├── Login.js
 |   |   ├── App.css
 |   |   ├── Chat.css
 |   |   ├── index.css
 |   |   ├── Message.css
 |   |   ├── Sidebar.css
 |   |   ├── SidebarChat.css
+|   |   ├── Login.css
 |   |   ├── app/
+|   |   |   ├── store.js
 |   |   └── features/
-└── (More to come)
+|   |   |   ├── userSlice.js
+└─ (More to Come)
 ```
-
 ## Creator
 
 - <https://github.com/Mylesthemonster>
