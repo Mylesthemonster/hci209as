@@ -2,6 +2,7 @@
   <h3 align="center">209A.S</h3>
   <p align="center">
     <h1 align="center">Human Computer Interaction</h1>
+    <h1 align="center">:computer: :bust_in_silhouette:</h1>
     <br>
   </p>
 </p>
@@ -52,4 +53,4 @@ hci209as/
 
 ## Thanks
 
-Thank you for viewing my class repo
+Thank you for viewing my class repo. :blush:
