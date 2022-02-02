@@ -5,7 +5,7 @@ import './App.css';
 import { selectUser, login, logout } from './features/userSlice';
 import { auth } from './firebase';
 import Login from './Login';
-import Message from './Message';
+import Imessage from './Imessage';
 
 function App() {
   const user = useSelector(selectUser);
@@ -30,8 +30,7 @@ function App() {
 
   return (
     <div className="app">
-      {user ? <Message /> : <Login />}
-       
+      {user ? <Imessage /> : <Login />}
     </div>
   );
 }

@@ -3,11 +3,10 @@ import React from 'react';
 import './Login.css'
 import image from './jots_icon.png'
 import { auth, provider } from './firebase';
-import { signInWithRedirect } from 'firebase/auth';
 
 function Login() {
     const signIn = () => {
-        signInWithRedirect(auth, provider);
+        auth.signInWithPopup(provider).catch((error)=> alert(error.message))
     }
   return <div className='login'>
       <div className='login__logo'>

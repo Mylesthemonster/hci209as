@@ -22,11 +22,11 @@
 .sidebar__input{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     flex: 1;
     background-color: #e6ecff;
     color: #8f98b3;
-    border-radius: 5px;
+    border-radius: 999px;
 }
 
 .sidebar__input > input {
@@ -34,6 +34,7 @@
     background: transparent;
     outline: none;
 }
+
 
 .sidebar__chat {
     overflow: scroll;
