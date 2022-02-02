@@ -34,6 +34,7 @@ hci209as/
 |   |   ├── Sidebar.js
 |   |   ├── SidebarChat.js
 |   |   ├── Login.js
+|   |   ├── Imessage.js
 |   |   ├── App.css
 |   |   ├── Chat.css
 |   |   ├── index.css
@@ -41,10 +42,12 @@ hci209as/
 |   |   ├── Sidebar.css
 |   |   ├── SidebarChat.css
 |   |   ├── Login.css
+|   |   ├── Imessage.css
 |   |   ├── app/
 |   |   |   ├── store.js
 |   |   └── features/
 |   |   |   ├── userSlice.js
+|   |   |   ├── chatSlice.js
 └─ (More to Come)
 ```
 ## Creator
