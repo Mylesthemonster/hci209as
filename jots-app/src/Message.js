@@ -17,7 +17,7 @@ const Message = forwardRef((
   const chatId = useSelector(selectChatId);
 
   const deleteMessage = () => {
-    db.collection('chats').doc(chatId).collection('messages').doc('8XnHMCJjKuBzjx22nytM').delete();
+    db.collection('chats').doc(chatId).collection('messages').doc('RnKN6zRoE4Mh9pQ8eF86').delete();
   }
 
   const editMessage = () => {
@@ -33,11 +33,11 @@ const Message = forwardRef((
   }
 
   return (
-    <div ref={ref} onClick={editMessage} className={`message ${user.email === email && 'message__sender'}`}>
+    <div ref={ref} className={`message ${user.email === email && 'message__sender'}`}>
         <IconButton>
             <HighlightOffIcon onClick={deleteMessage} className='message__delete_icon' />
         </IconButton>
-        <p>{message}</p>
+        <p onClick={editMessage}>{message}</p>
         <small>
             {timeago.format(new Date(timestamp?.toDate()).toLocaleString())}
             
