@@ -2,10 +2,10 @@ import { Avatar, IconButton } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import AddIcon from '@material-ui/icons/Add';
 import React, { useEffect, useState } from 'react';
-import './Sidebar.css';
+import '../css/Sidebar.css';
 import SidebarChat from './SidebarChat';
 import { useSelector } from 'react-redux';
-import { selectUser } from './features/userSlice';
+import { selectUser } from '../features/userSlice';
 import db, { auth } from './firebase';
 import firebase from 'firebase';
 
@@ -39,8 +39,8 @@ function Sidebar() {
       <div className='sidebar__header'>
           <Avatar onClick={() => auth.signOut()} src={user.photo} className='sidebar__avatar' />
           <div class="sidebar__input">
-              <SearchIcon />
-              <input placeholder='Search' />
+            <SearchIcon />
+            <input placeholder='Search'/>
           </div>
 
           <IconButton className='sidebar__inputButton'>

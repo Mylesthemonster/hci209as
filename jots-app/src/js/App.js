@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import './App.css';
-import { selectUser, login, logout } from './features/userSlice';
+import '../css/App.css';
+import { selectUser, login, logout } from '../features/userSlice';
 import { auth } from './firebase';
 import Login from './Login';
 import Imessage from './Imessage';

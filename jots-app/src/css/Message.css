@@ -4,14 +4,15 @@
     position: relative;
     width: fit-content;
     justify-content: space-between;
-    margin: 15px;
+    margin: 20px;
 }
 
 .message > p {
     background-color: #e6ecff;
+    white-space: pre-wrap;
     font-size: medium;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 25px;
     margin: 10px;
     margin-right: auto;
     border: 1px solid #8f98b3;
@@ -20,10 +21,11 @@
 
 .message > small {
     color: #8f98b3;
+    flex-direction: row;
     position: absolute;
     font-size: 8px;
-    bottom: -5px;
-    right: 0;
+    bottom: -15px;
+    right: 1;
 }
 
 .message__sender {
@@ -35,14 +37,24 @@
     color: black;
 }
 
+.message__sender > small {
+    right: 0;
+}
+
 .message__sender > .message__delete_icon{
     color: #8f98b3;
     order: 1;
-    margin: 15px;
 }
 
 .message__delete_icon{
     color: #8f98b3;
-    order: 0;
 }
 
+.message__sender > .message__edit_icon{
+    color: #8f98b3;
+    order: 1;
+}
+
+.message__edit_icon{
+    color: #8f98b3;
+}

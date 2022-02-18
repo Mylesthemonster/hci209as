@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setChat } from './features/chatSlice';
+import { setChat } from '../features/chatSlice';
 import db from './firebase';
-import './SidebarChat.css';
+import '../css/SidebarChat.css';
 import * as timeago from 'timeago.js';
 
 function SidebarChat({id, chatName}) {
