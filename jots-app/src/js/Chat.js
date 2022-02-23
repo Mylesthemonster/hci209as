@@ -66,15 +66,42 @@ function Chat() {
 
             db.collection("recipes").doc(q).get().then((doc) => {
                 if (doc.exists) {
+
                     let url1 = doc.data().url1
                     let url2 = doc.data().url2
                     let url3 = doc.data().url3
+
+                    let source1 = doc.data().source1
+                    let source2 = doc.data().source2
+                    let source3 = doc.data().source3
+
+                    let label1 = doc.data().label1
+                    let label2 = doc.data().label2
+                    let label3 = doc.data().label3
+
+                    let img1 = doc.data().img1
+                    let img2 = doc.data().img2
+                    let img3 = doc.data().img3
+
+
                     db.collection('chats').doc(chatId).collection('messages').add({
                         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                        message: 'Found a good recipe including ' + q + '.\nTry these ones:\n' + url1.replaceAll('"','') + '\n' + url2.replaceAll('"','') + '\n' + url3.replaceAll('"','') + '\n',
+                        message: 'Found good recipes including ' + q + '.\nTry these ones:',
+                        url1: url1.replaceAll('"',''),
+                        url2: url2.replaceAll('"',''),
+                        url3: url3.replaceAll('"',''),
+                        label1: label1.replaceAll('"',''),
+                        label2: label2.replaceAll('"',''),
+                        label3: label3.replaceAll('"',''),
+                        source1: source1.replaceAll('"',''),
+                        source2: source2.replaceAll('"',''),
+                        source3: source3.replaceAll('"',''),
+                        img1: img1.replaceAll('"',''),
+                        img2: img2.replaceAll('"',''),
+                        img3: img3.replaceAll('"',''),
                         uid: uuid(),
-                        email: 'Bot@gmail.com',
-                        displayName: 'Bot',
+                        email: 'Recipe_Bot@gmail.com',
+                        displayName: 'Recipe_Bot',
                       });
                 } else {
                     console.log("No such document!");
@@ -82,21 +109,39 @@ function Chat() {
             })
             break;
     
-            case input.includes('Username') || input.includes('Password') || input.includes('username') || input.includes('password') :
-                let tip = 'Senative Data should be stored in a secure Password manager. Try out https://passwords.google.com'
-                let exc = false;
-                if(!exc){
-                exc =true
+            case input.includes('Username') || input.includes('username'):
+                let tip1 = 'Your Username has been successfully stored.'
+                let exc1 = false;
+                if(!exc1){
+                exc1 =true
                 db.collection('chats').doc(chatId).collection('messages').add({
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                message: tip,
+                message: tip1,
                 uid: uuid(),
-                email: 'Bot@gmail.com',
-                displayName: 'Bot',
+                email: 'Username_Bot@gmail.com',
+                displayName: 'Username_Bot',
                 });
                 }
                 
-                break;
+            break;
+
+            case input.includes('Password') || input.includes('password') :
+                let tip2 = 'Your Passowrd hads be securely stored. However, important senative data should be stored in a Password manager. Try out: '
+                let link = 'https://passwords.google.com'
+                let exc2 = false;
+                if(!exc2){
+                exc2 =true
+                db.collection('chats').doc(chatId).collection('messages').add({
+                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                message: tip2,
+                link: link,
+                uid: uuid(),
+                email: 'Password_Bot@gmail.com',
+                displayName: 'Password_Bot',
+                });
+                }
+                
+            break;
             
             default:
                 break;

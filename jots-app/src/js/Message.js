@@ -9,9 +9,10 @@ import firebase from 'firebase';
 import { IconButton } from '@material-ui/core';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import EditIcon from '@material-ui/icons/Edit';
+import image from '../icons/lock.gif';
 
 const Message = forwardRef((
-    {contents:{timestamp, email, message}},
+    {contents:{timestamp, email, message, displayName, link, url1, url2, url3, label1, label2, label3, source1, source2, source3, img1, img2, img3}},
     ref
 ) => {
   const user = useSelector(selectUser);
@@ -70,7 +71,40 @@ const Message = forwardRef((
         <IconButton onClick={deleteMessage} className='message__delete_icon' size='small' >
           <HighlightOffIcon fontSize='small'/>
         </IconButton>
-        <p id='txt'>{message}</p>
+        
+        {displayName === 'Recipe_Bot' &&
+          <p id='txt__recipe'>
+          {message} <br/><br/> {label1} from {source1} <br/><br/>
+          <img src={img1} alt='Recipe_1_img'/><br/>
+          <a href={url1}>{url1}</a><br/>
+          <br/> {label2} from {source2}<br/><br/>
+          <img src={img2} alt='Recipe_2_img'/><br/>
+          <a href={url2}>{url2}</a><br/>
+          <br/> {label3} from {source3}<br/><br/>
+          <img src={img3} alt='Recipe_3_img'/><br/>
+          <a href={url3}>{url3}</a><br/>
+          </p>
+        }
+
+        {displayName === 'Username_Bot' && 
+          <p id='txt__username'>
+          {message}<br/><br/>
+          <img src={image} alt='lock_animation_gif' width={200}/>
+          </p>
+        }
+
+        {displayName === 'Password_Bot' &&  
+          <p id='txt__password'>
+          {message}
+          <a href={link}>{link}</a><br/><br/>
+          <img src={image} alt='lock_animation_gif' width={200}/>
+          </p>
+        }
+
+        {displayName === user.displayName && 
+          <p id='txt__default'>{message}</p>
+        }
+
         <small>
             {timeago.format(new Date(timestamp?.toDate()).toLocaleString())}
             <IconButton onClick={editMessage} className='message__edit_icon' size='small' >

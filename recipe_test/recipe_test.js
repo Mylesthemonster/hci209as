@@ -33,7 +33,8 @@ switch(true){
         "field": 'url'
     }
     let url = endpoint + formatParams(parameters)
-    fetch(url)
+    let xtra_param = '&field=label&field=source&field=image'
+    fetch(url+xtra_param)
         .then( res => res.json())
         .then(response => {
             let recipe = (response);
