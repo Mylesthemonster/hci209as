@@ -58,3 +58,11 @@
 .message__edit_icon{
     color: #8f98b3;
 }
+
+.lock_gif{
+    border-radius: 25px;
+}
+
+.recipe_img{
+    border-radius: 25px;
+}

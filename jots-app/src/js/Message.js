@@ -75,13 +75,13 @@ const Message = forwardRef((
         {displayName === 'Recipe_Bot' &&
           <p id='txt__recipe'>
           {message} <br/><br/> {label1} from {source1} <br/><br/>
-          <img src={img1} alt='Recipe_1_img'/><br/>
+          <img className='recipe_img' src={img1} alt='Recipe_1_img'/><br/>
           <a href={url1}>{url1}</a><br/>
           <br/> {label2} from {source2}<br/><br/>
-          <img src={img2} alt='Recipe_2_img'/><br/>
+          <img className='recipe_img' src={img2} alt='Recipe_2_img'/><br/>
           <a href={url2}>{url2}</a><br/>
           <br/> {label3} from {source3}<br/><br/>
-          <img src={img3} alt='Recipe_3_img'/><br/>
+          <img className='recipe_img' src={img3} alt='Recipe_3_img'/><br/>
           <a href={url3}>{url3}</a><br/>
           </p>
         }
@@ -89,7 +89,7 @@ const Message = forwardRef((
         {displayName === 'Username_Bot' && 
           <p id='txt__username'>
           {message}<br/><br/>
-          <img src={image} alt='lock_animation_gif' width={200}/>
+          <img className='lock_gif' src={image} alt='lock_animation_gif' width={200}/>
           </p>
         }
 
@@ -97,7 +97,7 @@ const Message = forwardRef((
           <p id='txt__password'>
           {message}
           <a href={link}>{link}</a><br/><br/>
-          <img src={image} alt='lock_animation_gif' width={200}/>
+          <img className='lock_gif' src={image} alt='lock_animation_gif' width={200}/>
           </p>
         }
 
