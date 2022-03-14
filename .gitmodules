@@ -1,0 +1,3 @@
+[submodule "imessage-clone"]
+	path = imessage-clone
+	url = git@github.com:jackeelam/imessage-clone.git
