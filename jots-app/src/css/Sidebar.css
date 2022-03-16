@@ -1,5 +1,5 @@
 .sidebar {
-    flex: 0.3;
+    flex: 0.35;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -7,43 +7,44 @@
     border-right: 1px solid #8f98b3;
 }
 
-.sidebar__header {
+.sidebar_header {
     display: flex;
     align-items: center;
     padding: 10px;
     height: 50px;
 }
 
-.sidebar__avatar {
+.sidebar_avatar {
     cursor: pointer;
     margin: 10px;
 }
 
-.sidebar__input{
+.sidebar_input {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     flex: 1;
     background-color: #e6ecff;
     color: #8f98b3;
-    border-radius: 999px;
+    border-radius: 5px;
 }
 
-.sidebar__input > input {
+.sidebar_input > input {
     border: none;
-    background: transparent;
-    outline: none;
+    background-color: transparent;
+    outline-width: 0;
 }
 
-.sidebar__chat {
+.sidebar_chats {
     overflow: scroll;
 }
 
-.sidebar__chat::-webkit-scrollbar {
-    display: none;
+/* Chrome, safari, opera */
+.sidebar_chats::-webkit-scrollbar {
+    display:none;
 }
 
-.sidebar__chat {
+.sidebar_chats {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }

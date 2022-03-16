@@ -6,23 +6,19 @@
     cursor: pointer;
 }
 
-.sidebarChat:hover {
+.sidebarChat:hover{
     background-color: #e6ecff;
     color: #8f98b3;
 }
 
-.sidebarChat__info {
-    margin-left: 1px;
+.sidebarChat_info {
+    margin-left: 15px;
     position: relative;
-    width: 100%;
+    width:100%;
 }
 
-.sidebarChat__info > small {
+.sidebarChat_info > small {
     position: absolute;
     top: 5px;
     right: 0;
-}
-
-.sidebarChat__info > p {
-    padding-top: 5px;
 }

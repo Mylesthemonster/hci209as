@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
-import App from './js/App';
+import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 
@@ -13,4 +13,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-

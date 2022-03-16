@@ -1,10 +1,10 @@
-.message{
+.message {
     display: flex;
     align-items: center;
     position: relative;
     width: fit-content;
     justify-content: space-between;
-    margin: 20px;
+    margin: 15px;
 }
 
 .message > p {
@@ -12,7 +12,7 @@
     white-space: pre-wrap;
     font-size: medium;
     padding: 15px;
-    border-radius: 25px;
+    border-radius: 20px;
     margin: 10px;
     margin-right: auto;
     border: 1px solid #8f98b3;
@@ -21,48 +21,25 @@
 
 .message > small {
     color: #8f98b3;
-    flex-direction: row;
     position: absolute;
     font-size: 8px;
-    bottom: -15px;
-    right: 1;
+    bottom: -5px;
+    right: 0;
 }
-
-.message__sender {
+/* right side */
+.message_sender {
     margin-left: auto;
 }
 
-.message__sender > p {
+.message_sender > .message_photo {
+    order: 1;
+    margin: 15px;
+}
+
+.message_sender > p {
     background-color: #f2f5ff;
     color: black;
 }
-
-.message__sender > small {
-    right: 0;
-}
-
-.message__sender > .message__delete_icon{
-    color: #8f98b3;
-    order: 1;
-}
-
-.message__delete_icon{
-    color: #8f98b3;
-}
-
-.message__sender > .message__edit_icon{
-    color: #8f98b3;
-    order: 1;
-}
-
-.message__edit_icon{
-    color: #8f98b3;
-}
-
-.lock_gif{
-    border-radius: 25px;
-}
-
-.recipe_img{
-    border-radius: 25px;
+.message_photo {
+    order: 0;
 }

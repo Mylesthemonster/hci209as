@@ -1,5 +1,5 @@
 {
-  "name": "jots-app",
+  "name": "imessage-clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,16 +9,19 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.25.0",
-    "firebase": "^7.23.0",
-    "jquery": "^3.6.0",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "firebase": "^9.6.8",
+    "gapi-client": "^0.0.3",
+    "googleapis": "^96.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-flip-move": "^3.0.4",
     "react-redux": "^7.2.6",
     "react-scripts": "5.0.0",
-    "react-uuid": "^1.0.2",
-    "timeago.js": "^4.0.2"
+    "sentiment": "^5.0.2",
+    "timeago.js": "^4.0.2",
+    "uuid": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
